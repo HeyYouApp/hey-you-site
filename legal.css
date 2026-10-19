@@ -1,0 +1,83 @@
+/* Shared styles for /privacy/ and /support/. Tokens match index.html. */
+:root {
+  --paper: #FAF9F4;
+  --ink: #16211A;
+  --ink-soft: #3A443C;
+  --stone: #5B6357;
+  --forest-700: #1F3D26;
+  --forest-500: #3F7048;
+  --mint-100: #E3F1E0;
+  --line: #DEDCD0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: 'Quicksand', -apple-system, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+a { color: var(--forest-700); font-weight: 600; }
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-header { padding: 26px 0; }
+
+.wordmark {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+main { padding: 24px 0 48px; }
+
+h1 { font-size: clamp(32px, 6vw, 44px); margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 40px 0 10px; }
+h3 { font-size: 18px; margin: 28px 0 6px; }
+p, ul { margin: 0 0 14px; color: var(--ink-soft); }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+
+.meta { color: var(--stone); font-size: 15px; }
+
+.summary {
+  background: var(--mint-100);
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.summary ul { margin: 0; }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+  font-size: 14px;
+  color: var(--stone);
+}
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+.site-footer a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.site-footer a:hover { color: var(--forest-700); }
