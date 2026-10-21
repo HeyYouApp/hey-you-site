@@ -432,6 +432,12 @@
   }
 
   .site-footer a:hover { color: var(--forest-700); }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
 </style>
 </head>
 <body>
@@ -545,7 +551,11 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>&copy; 2026 Hey You</span>
-    <a href="https://x.com/HeyYouTeam" target="_blank" rel="noopener">@HeyYouTeam</a>
+    <span class="footer-links">
+      <a href="/privacy/">Privacy</a>
+      <a href="/support/">Support</a>
+      <a href="https://x.com/HeyYouTeam" target="_blank" rel="noopener">@HeyYouTeam</a>
+    </span>
   </div>
 </footer>
 
