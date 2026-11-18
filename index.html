@@ -105,6 +105,28 @@
     color: var(--forest-700);
   }
 
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--ink-soft);
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible { color: var(--forest-700); }
+
+  @media (max-width: 480px) {
+    .site-header .header-link { display: none; }
+  }
+
   /* ---------- hero ---------- */
 
   .hero {
@@ -447,7 +469,10 @@
 <header class="site-header">
   <div class="wrap">
     <a class="wordmark" href="#top">Hey You</a>
-    <a class="header-link" href="https://x.com/HeyYouTeam" target="_blank" rel="noopener">Follow along on X</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="nav-link" href="/store/">Store</a>
+      <a class="header-link" href="https://x.com/HeyYouTeam" target="_blank" rel="noopener">Follow along on X</a>
+    </nav>
   </div>
 </header>
 
@@ -554,6 +579,7 @@
   <div class="wrap">
     <span>&copy; 2026 Hey You</span>
     <span class="footer-links">
+      <a href="/store/">Store</a>
       <a href="/privacy/">Privacy</a>
       <a href="/support/">Support</a>
       <a href="https://x.com/HeyYouTeam" target="_blank" rel="noopener">@HeyYouTeam</a>

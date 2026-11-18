@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Planner — Hey You Store</title>
+<meta name="description" content="An undated, coil-bound weekly planner for staying close to your friends, family, and network. 52 weekly pages, US Letter landscape.">
+<meta property="og:title" content="Hey You Weekly Planner">
+<meta property="og:description" content="A weekly planner for staying close to your friends, family, and network.">
+<meta property="og:image" content="https://get-hey-you.com/store/weekly-planner/images/cover.jpg">
+<meta property="og:url" content="https://get-hey-you.com/store/weekly-planner/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/store/store.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/">Hey You</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="nav-link" href="/store/" aria-current="page">Store</a>
+      <a class="header-link" href="https://apps.apple.com/us/app/hey-you-call-me-back/id6810311287" target="_blank" rel="noopener">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/store/">Store</a> / Weekly Planner
+    </nav>
+
+    <div class="product">
+
+      <div class="gallery">
+        <div class="gallery__main">
+          <img id="gallery-main" src="images/cover.jpg" width="1600" height="1258" alt="Hey You Weekly Planner cover">
+        </div>
+        <div class="gallery__thumbs">
+          <button class="gallery__thumb" type="button" aria-pressed="true" data-src="images/cover.jpg" data-w="1600" data-h="1258" data-alt="Hey You Weekly Planner cover">
+            <img src="images/cover.jpg" width="1600" height="1258" alt="" loading="lazy">
+          </button>
+          <button class="gallery__thumb" type="button" aria-pressed="false" data-src="images/how-to.jpg" data-w="1600" data-h="1236" data-alt="The planner's How to use your planner page, explaining each section">
+            <img src="images/how-to.jpg" width="1600" height="1236" alt="" loading="lazy">
+          </button>
+          <button class="gallery__thumb" type="button" aria-pressed="false" data-src="images/weekly-page.jpg" data-w="1600" data-h="1236" data-alt="A weekly page with Reach out this week, Follow ups, Priorities, a Reach out to list for each day, and Notes">
+            <img src="images/weekly-page.jpg" width="1600" height="1236" alt="" loading="lazy">
+          </button>
+        </div>
+      </div>
+
+      <div class="product__info">
+        <span class="product__kind">Planner</span>
+        <h1 class="product__name">Hey You Weekly Planner</h1>
+        <p class="product__tagline">A weekly planner for staying close to your friends, family, and network.</p>
+
+        <div class="product__buy">
+          <a class="btn btn--primary" href="https://www.lulu.com/shop/hey-you/weekly-planner/paperback/product-rmqw565.html" target="_blank" rel="noopener">Buy on Lulu</a>
+        </div>
+        <p class="product__note">Printed and shipped by Lulu, usually within 3–5 business days. Prices are shown in your local currency.</p>
+
+        <ul class="product__facts" aria-label="Details">
+          <li>Undated</li>
+          <li>52 weekly pages</li>
+          <li>Coil bound, lies flat</li>
+          <li>US Letter landscape, 11 × 8.5 in</li>
+        </ul>
+
+        <div class="product__desc">
+          <p>Each week starts with a short list of people you’d like to reach out to. Circle whether you’ll call or text, and check them off once you have. Every day also has space to pick someone from that list, alongside room for follow ups, priorities and notes, so the rest of your weekly planning stays in one place too.</p>
+          <p>Undated, so you can start any week. It has 52 weekly pages, a lined notes page, and a coil binding that lies flat while you write.</p>
+          <p>Your people, a nudge away.</p>
+        </div>
+
+        <div class="pair-card">
+          <div>
+            <p class="pair-card__title">Pair it with the app</p>
+            <p class="pair-card__text">Hey You nudges you to reach out to one person a day.</p>
+          </div>
+          <a class="btn" href="https://apps.apple.com/us/app/hey-you-call-me-back/id6810311287" target="_blank" rel="noopener">Download on the App Store</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 Hey You</span>
+    <span class="footer-links">
+      <a href="/store/">Store</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/support/">Support</a>
+      <a href="https://x.com/HeyYouTeam" target="_blank" rel="noopener">@HeyYouTeam</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  // Swap the large image when a thumbnail is clicked.
+  (function () {
+    var main = document.getElementById('gallery-main');
+    var thumbs = document.querySelectorAll('.gallery__thumb');
+    thumbs.forEach(function (thumb, i) {
+      thumb.setAttribute('aria-label', 'Show image ' + (i + 1) + ' of ' + thumbs.length);
+      thumb.addEventListener('click', function () {
+        main.src = thumb.dataset.src;
+        main.width = thumb.dataset.w;
+        main.height = thumb.dataset.h;
+        main.alt = thumb.dataset.alt;
+        thumbs.forEach(function (t) { t.setAttribute('aria-pressed', t === thumb ? 'true' : 'false'); });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
