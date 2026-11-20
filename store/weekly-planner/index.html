@@ -100,23 +100,7 @@
   </div>
 </footer>
 
-<script>
-  // Swap the large image when a thumbnail is clicked.
-  (function () {
-    var main = document.getElementById('gallery-main');
-    var thumbs = document.querySelectorAll('.gallery__thumb');
-    thumbs.forEach(function (thumb, i) {
-      thumb.setAttribute('aria-label', 'Show image ' + (i + 1) + ' of ' + thumbs.length);
-      thumb.addEventListener('click', function () {
-        main.src = thumb.dataset.src;
-        main.width = thumb.dataset.w;
-        main.height = thumb.dataset.h;
-        main.alt = thumb.dataset.alt;
-        thumbs.forEach(function (t) { t.setAttribute('aria-pressed', t === thumb ? 'true' : 'false'); });
-      });
-    });
-  })();
-</script>
+<script src="/store/gallery.js"></script>
 
 </body>
 </html>
